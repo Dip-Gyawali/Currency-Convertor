@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background: url('https://i.pinimg.com/564x/63/99/64/63996481c566214e2c062a7f67db9f2a.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Consolas, Monaco, monospace;
+}
+.home{
+    padding: 40px;
+    border-radius: 20px;
+    background: #283eca71;
+}
+.heading{
+   color:white;
+   font-size: 3vw;
+}
+.convert-sec{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.from-sec{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vw;
+}
+.from-head{
+    color: white;
+}
+.to-sec{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vw;
+}
+.to-head{
+    color: white;
+}
+.drop-down{
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1vw;
+    background-color: #283ecab7;
+    border-radius: 20px;
+    padding: 5px;
+}
+.conversion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.conversion input{
+    width: 80%;
+    margin-left: 10px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    padding: 5px;
+    color: white;
+}
+.conversion input:focus {
+    outline: none;
+}
+.conversion input::-webkit-outer-spin-button,
+.conversion input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.conversion input::placeholder{
+    color: white;
+}
+.result{
+    width: 80%;
+    font-size: 30px;
+    text-align: start;
+    margin-left: 10px;
+    border-bottom: 2px solid black;
+    color: white;
+}
+.btn-sec{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-sec button{
+    margin-top: 20px;
+    width: 80%;
+    font-size: 1.5vw;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: #9370DB;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+} 
+.btn-sec button:hover{
+    background-color: #814ee6;
+    transform: scale(1.05);
+}
