@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 export default function Content() {
+    //all county currency value accepted by apiUrl
     let currencies = [
         "AED", "AFN", "ALL", "AMD", "ANG", "AOA", "ARS", "AUD", "AWG", "AZN",
         "BAM", "BBD", "BDT", "BGN", "BHD", "BIF", "BMD", "BND", "BOB", "BRL",
@@ -31,23 +32,36 @@ export default function Content() {
 
     function handleFrom(e){
         setFromCurr(e.target.value);
+        //when user change option then direct conversion occurs giving effect of live change
+        //here condition statement becz when we change option without first button click then conversion should not be initiated
+        if(startCode){
+            getData();
+        }
     }
 
     function handleTo(e){
         setToCurr(e.target.value);
+         //when user change option then direct conversion occurs giving effect of live change
+         //here condition statement becz when we change option without first button click then conversion should not be initiated
+         if(startCode){
+             getData();
+         }
     }
 
     function handleConversionAmt(e){
         setConversionAmt(e.target.value);
     }
  
-    useState(()=>{
+    //just good practise to call it from useEffect
+    useEffect(()=>{
+        //Due to strict mode on it initially calls getData() 2 times so to prevent that true/false is set
         if(startCode){
             getData();
         }
     },[])
 
     async function getData(){
+         //Due to strict mode on it initially calls getData() 2 times so to prevent that true/false is set
         setStartCode(true);
         
         try{
@@ -57,8 +71,8 @@ export default function Content() {
             }
             // console.log(response);
             let data = await response.json();
-            console.log(data);
-            console.log(data.conversion_rate  * conversionAmt);
+           // console.log(data);
+           // console.log(data.conversion_rate  * conversionAmt);
             setConversionRate((data.conversion_rate * conversionAmt).toFixed(2));
 
         }
