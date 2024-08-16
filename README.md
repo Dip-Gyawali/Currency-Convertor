@@ -6,4 +6,4 @@ A mini Project in React JS that converts currency using ExchangeRate APi with la
 ![App Screenshot](screenshot.png)
 
 ## Visit the website :
-[Currency Convertor](https://dreamy-praline-cd0eb8.netlify.app/)
+[Currency Convertor](https://stupendous-scone-00d366.netlify.app/)
