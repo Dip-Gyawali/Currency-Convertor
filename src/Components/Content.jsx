@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState} from "react";
 
 export default function Content() {
     //all county currency value accepted by apiUrl
@@ -51,14 +51,6 @@ export default function Content() {
     function handleConversionAmt(e){
         setConversionAmt(e.target.value);
     }
- 
-    //just good practise to call it from useEffect
-    useEffect(()=>{
-        //Due to strict mode on it initially calls getData() 2 times so to prevent that true/false is set
-        if(startCode){
-            getData();
-        }
-    },[])
 
     async function getData(){
          //Due to strict mode on it initially calls getData() 2 times so to prevent that true/false is set
